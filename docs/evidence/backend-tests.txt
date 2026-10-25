@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.kombat.kombatbackend.KombatBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.240 s -- in com.kombat.kombatbackend.KombatBackendApplicationTests
+-------------------------------------------------------------------------------
+Test set: com.kombat.kombatbackend.service.GameServiceFreeSpawnFlowTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in com.kombat.kombatbackend.service.GameServiceFreeSpawnFlowTest

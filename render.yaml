@@ -3,7 +3,9 @@ services:
     name: kombat-backend
     runtime: docker
     plan: free
+    rootDir: backend
     dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /api/hello
     autoDeploy: true
     envVars:

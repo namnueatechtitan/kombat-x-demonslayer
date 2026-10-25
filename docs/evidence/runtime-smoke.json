@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Backend executable JAR health",
+    "status": "Passed"
+  },
+  {
+    "name": "REST game configuration",
+    "status": "Passed"
+  },
+  {
+    "name": "REST CORS permits configured localhost origin",
+    "status": "Passed"
+  },
+  {
+    "name": "REST CORS rejects an unconfigured origin",
+    "status": "Passed"
+  },
+  {
+    "name": "WebSocket STOMP CONNECT handshake",
+    "status": "Passed"
+  },
+  {
+    "name": "Frontend built preview serves application HTML",
+    "status": "Passed"
+  }
+]
