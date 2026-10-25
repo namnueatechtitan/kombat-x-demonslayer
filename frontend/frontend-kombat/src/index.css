@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* Cinematic Slow Zoom */
+/* ============================= */
+
+@keyframes cinematicZoom {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.15); }
+}
+
+.animate-cinematic {
+  animation: cinematicZoom 45s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* ============================= */
+/* Floating Drift */
+/* ============================= */
+
+@keyframes driftFloat {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(30px, 30px); }
+  50% { transform: translate(15px, -20px); }
+  75% { transform: translate(-15px, -10px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.animate-drift {
+  animation: driftFloat 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes menuSparkFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.92);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(12px, -110px, 0) scale(1.08);
+    opacity: 0;
+  }
+}
+
+.animate-menu-spark {
+  animation: menuSparkFloat 3.8s linear infinite;
+}
+
+@keyframes menuEnergyPulse {
+  0%, 100% {
+    opacity: 0.48;
+    transform: scaleX(0.98);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scaleX(1.02);
+  }
+}
+
+.animate-menu-energy {
+  animation: menuEnergyPulse 2.4s ease-in-out infinite;
+}
+
+/* ============================= */
+/* Epic Copper-Gold Scrollbar */
+/* ============================= */
+
+.custom-scroll::-webkit-scrollbar {
+  width: 18px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(20, 5, 5, 0.85);
+  border-radius: 20px;
+  box-shadow: inset 0 0 12px rgba(255, 80, 0, 0.3);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #facc15 0%,
+    #f59e0b 30%,
+    #ea580c 70%,
+    #b91c1c 100%
+  );
+  border-radius: 20px;
+  border: 2px solid rgba(255, 200, 100, 0.4);
+  box-shadow:
+    0 0 12px rgba(250, 204, 21, 0.8),
+    0 0 25px rgba(234, 88, 12, 0.6);
+  transition: all 0.3s ease;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  box-shadow:
+    0 0 20px rgba(250, 204, 21, 1),
+    0 0 35px rgba(234, 88, 12, 0.9);
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #ea580c rgba(20, 5, 5, 0.85);
+}
+
+/* ============================= */
+/* Player Panel Scrollbar */
+/* ============================= */
+
+.panel-scroll-player1,
+.panel-scroll-player2 {
+  scrollbar-width: thin;
+}
+
+.panel-scroll-player1::-webkit-scrollbar,
+.panel-scroll-player2::-webkit-scrollbar {
+  width: 10px;
+}
+
+.panel-scroll-player1::-webkit-scrollbar-track,
+.panel-scroll-player2::-webkit-scrollbar-track {
+  border-radius: 999px;
+  margin: 4px;
+}
+
+.panel-scroll-player1::-webkit-scrollbar-thumb,
+.panel-scroll-player2::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel-scroll-player1 {
+  scrollbar-color: #f59e0b rgba(53, 6, 9, 0.7);
+}
+
+.panel-scroll-player1::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, rgba(90, 11, 15, 0.72), rgba(45, 5, 8, 0.85));
+  box-shadow: inset 0 0 10px rgba(255, 72, 0, 0.22);
+}
+
+.panel-scroll-player1::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffd54a 0%, #ff8a00 52%, #ff4d1f 100%);
+  box-shadow:
+    0 0 8px rgba(255, 153, 0, 0.7),
+    0 0 16px rgba(255, 69, 0, 0.45);
+}
+
+.panel-scroll-player1::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 10px rgba(255, 195, 0, 0.88),
+    0 0 20px rgba(255, 69, 0, 0.62);
+}
+
+.panel-scroll-player2 {
+  scrollbar-color: #e879f9 rgba(32, 7, 48, 0.75);
+}
+
+.panel-scroll-player2::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, rgba(62, 12, 92, 0.72), rgba(26, 6, 38, 0.86));
+  box-shadow: inset 0 0 10px rgba(186, 85, 255, 0.28);
+}
+
+.panel-scroll-player2::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f0abfc 0%, #d946ef 52%, #7e22ce 100%);
+  box-shadow:
+    0 0 8px rgba(217, 70, 239, 0.7),
+    0 0 16px rgba(126, 34, 206, 0.48);
+}
+
+.panel-scroll-player2::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 10px rgba(236, 72, 153, 0.86),
+    0 0 20px rgba(147, 51, 234, 0.62);
+}
+
+/* ============================= */
+/* Game End Modal */
+/* ============================= */
+
+@keyframes gameEndPulse {
+  0% { opacity: 0.42; transform: scale(0.94); }
+  50% { opacity: 0.88; transform: scale(1.02); }
+  100% { opacity: 0.42; transform: scale(0.94); }
+}
+
+@keyframes gameEndSheen {
+  0% { transform: translateX(-9%) translateY(0%); opacity: 0.2; }
+  50% { transform: translateX(9%) translateY(-1%); opacity: 0.35; }
+  100% { transform: translateX(-9%) translateY(0%); opacity: 0.2; }
+}
+
+.animate-game-end-pulse {
+  animation: gameEndPulse 2.4s ease-in-out infinite;
+}
+
+.animate-game-end-sheen {
+  animation: gameEndSheen 4.4s ease-in-out infinite;
+}
+
+/* ============================= */
+/* Action Log Lively */
+/* ============================= */
+
+@keyframes actionLogPulse {
+  0% { opacity: 0.55; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 0.55; transform: scale(0.9); }
+}
+
+@keyframes actionLogLatestPop {
+  0% { transform: translateX(-6px); opacity: 0.55; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.action-log-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #facc15;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.82);
+  animation: actionLogPulse 1.3s ease-in-out infinite;
+}
+
+.action-log-line {
+  color: #d1d5db;
+  border-left: 2px solid transparent;
+  padding-left: 8px;
+  line-height: 1.35;
+}
+
+.action-log-line-latest {
+  color: #fde68a;
+  border-left-color: #f59e0b;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0));
+  box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.22);
+  animation: actionLogLatestPop 0.28s ease-out;
+}
+
+.action-log-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b rgba(14, 10, 10, 0.85);
+}
+
+.action-log-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.action-log-scroll::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, rgba(22, 14, 10, 0.92), rgba(12, 9, 10, 0.96));
+  border-radius: 999px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.action-log-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #facc15 0%, #f59e0b 48%, #b45309 100%);
+  border-radius: 999px;
+  border: 1px solid rgba(254, 240, 138, 0.45);
+  box-shadow:
+    0 0 8px rgba(245, 158, 11, 0.55),
+    0 0 14px rgba(180, 83, 9, 0.4);
+}
+
+.action-log-scroll::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.08);
+}
+
+/* ============================= */
+/* Smooth Screen Shake */
+/* ============================= */
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-1px); }
+  50%  { transform: translateX(1px); }
+  75%  { transform: translateX(-0.5px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-shake {
+  animation: shake 0.15s ease-out;
+}
+.animate-shake {
+  animation: shake 0.2s ease-out;
+}
+.animate-shake {
+  animation: shake 0.25s ease;
+}
+.animate-shake {
+  animation: shake 0.35s ease;
+}
+
+/* ============================= */
+/* Card Aura Glow (Assassin Style) */
+/* ============================= */
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.ุ6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+.card-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 40px;
+  filter: blur(60px);
+  animation: glowPulse 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Human strategy editor scrollbar */
+.strategy-editor-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b rgba(28, 6, 8, 0.9);
+}
+
+.strategy-editor-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.strategy-editor-scroll::-webkit-scrollbar-track {
+  background: var(--strategy-scroll-track, linear-gradient(180deg, rgba(55, 10, 12, 0.9), rgba(24, 5, 7, 0.95)));
+  border-radius: 999px;
+  border: 1px solid rgba(251, 146, 60, 0.25);
+}
+
+.strategy-editor-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 1px solid rgba(254, 240, 138, 0.45);
+  background: var(--strategy-scroll-thumb, linear-gradient(180deg, #facc15 0%, #f59e0b 52%, #dc2626 100%));
+  box-shadow:
+    0 0 8px rgba(250, 204, 21, 0.55),
+    0 0 14px rgba(220, 38, 38, 0.4);
+}
+
+.strategy-editor-scroll::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.08);
+}
